@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>jedzoka's way for efficently using computers</title>
+<style>
+::-webkit-scrollbar{display:none}
+body{
+background-color:#1b262c;
+font-family:sans-serif;
+text-align:center;
+font-size:30px;
+}
+p{
+transition:opacity .5s .25s ease-out;
+margin-left:50px;
+}
+i{
+color:#ff6464;
+display:block;
+font-size:50px;
+}
+h4,h4{display:inline}
+a{color:#5fa5d3}
+.a{opacity:1}
+p,.b{opacity:0.3}
+b,.c{color:orange}
+body,.d{color:#bbe1fa}
+</style>
+</head>
+<body>
+<div style="top:0;text-align:left;position:fixed;">
+<h4>0</h4><br>
+<h4>1</h4><br>
+<h4>2</h4><br>
+<h4>3</h4><br>
+<h4>4</h4><br>
+<h4>5</h4><br>
+<h4>6</h4><br><br>
+<h4 onclick="m(37)">⬆️</h4><br>
+<h4 onclick="m(39)">⬇️</h4>
+</div>
+<p><i>This site is a <a style="color:#ff6464" href="https://github.com/jedzoka/webslide">webslide</a></i>
+<b>Use right and left arrow keys or buttons on left to change the slide</b><br><br>
+<a href="https://brave.com/jed543">My favourite browser</a><br><br><a href="/">My other work</a><br><br>Debian and Neovim are also great<br><br>
+<i>jeDWM - jedzoka's Window Manager</i><br><br><i>Installation</i>
+1. Download the <a href="https://drive.google.com/file/d/1yzQQkk-2FlkvmoTz6K31jfrY4ZF5hGS8/view?usp=sharing">zip file</a> and extract it to your home directory(~)<br>
+2. Open the terminal and type:<br>
+<b>sudo apt-get install tinywm && sudo mv ~/jeDWM /usr/bin/tinywm</b><br>
+3. Logout, click the gear icon and select tinywm
+</p><p><i>Keybindings</i>
+alt+shift+q logout<br>
+alt+z opens terminal<br>
+alt+b opens web browser<br>
+alt+p opens file manager<br>
+alt+x closes window<br>
+alt+right mouse button - resizing window<br>
+alt+left mouse button - moving window
+</p><p><b>changing layouts</b><br>
+alt+t tiling<br>
+alt+f floating<br>
+alt+m monocle
+</p><p><b>playing with tags - virtual desktops</b><br>
+alt+tab goes to the previous tag<br>
+alt+[1-9] goes to given tag<br>
+alt+shift+[1-9] moves window to given tag<br>
+alt+0 shows all opened windows<br>
+alt+shift+0 moves window to every tag<br>
+alt+shift+ctrl+[1-9] hides window on given tag<br>
+alt+ctrl+[1-9] shows content of given tag in current tag
+</p><p><b>Positioning windows</b><br>
+alt+enter<br>
+alt+h<br>
+alt+l<br>
+alt+i<br>
+alt+d
+</p><p><b>Changing focus</b><br>
+alt+j<br>
+alt+k<br><br>
+To add custom keybindings you need to recompile or make aliases in ~/.bashrc. Additionally you can use a tool like DConf<br>
+To check battery life and date add <b>date && cat /sys/class/power_supply/BAT0/capacity</b> to your ~/.bashrc
+</p><p><i>Compilation</i>
+I just downloaded <a href="https://dwm.suckless.org/">the source code</a> and removed most instances of "bar" and "title" from dwm.c<br>
+That's why mine is smaller than default dwm build<br>
+Type <b>sudo apt-get install make libxinerama-dev libx11-dev tcc</b><br>
+Then download dwm, cd into dwm and type:<br>
+<b>sudo make -f Makefile && sudo mv dwm /usr/bin/tinywm</b><br>
+in config.mk you may need to set CC=tcc<br><br>
+<script src="index.js"></script>
+</body>
+</html>
