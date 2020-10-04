@@ -1,9 +1,9 @@
 # General: 
 
-###A simple way to turn your websites into a slideshow
+### A simple way to turn your websites into a slideshow
 
 
-#technologies: 
+## technologies: 
 
 ### This tool uses the observer API as well as HTML, CSS, and vanilla Javascript
 
